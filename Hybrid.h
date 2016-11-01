@@ -47,10 +47,7 @@ Hybrid<T>::~Hybrid()
 template <class T>
 bool Hybrid<T>::isEmpty()
 {
-	if (q->isEmpty() && sldl->isEmpty());
-	{
-		return 0;
-	}
+	return q->isEmpty();
 }
 template <class T>
 bool Hybrid<T>::enqueue(T* item)
