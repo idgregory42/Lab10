@@ -44,11 +44,16 @@ Hybrid<T>::~Hybrid()
 //simply comment the first implementation out when working on the second implementation
 //use the getKey method to dequeue/remove
 
+<<<<<<< HEAD
 template < class T >
+=======
+template <class T>
+>>>>>>> 7018d218036daf22f0d103114d521836506773a3
 bool Hybrid<T>::isEmpty()
 {
 	return q->isEmpty();
 }
+<<<<<<< HEAD
 
 template < class T >
 void Hybrid<T>::enqueue(T* item)
@@ -66,6 +71,13 @@ T* Hybrid<T>::dequeue()
 	T* item = q->dequeue();
 	item = sldl->remove(item);
 	return item;
+=======
+template <class T>
+bool Hybrid<T>::enqueue(T* item)
+{
+	q-> 
+	sldl-> 
+>>>>>>> 7018d218036daf22f0d103114d521836506773a3
 }
 
 template < class T >
