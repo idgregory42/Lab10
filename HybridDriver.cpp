@@ -51,14 +51,14 @@ int main()
       cd->displayCD();
    }
    delete iter;
-
+/*
    while(!(h->isEmpty()))
    {
       CD* cd = h->dequeue();
       cd->displayCD();
    }
    delete h;
-
+*/
    deleteCDs(cds);
    delete cds;
    return 0;
