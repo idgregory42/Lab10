@@ -2,7 +2,7 @@
 #define SLDL_H
 
 #include "ListDoublyLinkedIterator.h"
-#include "Text.h"
+#include "CSC2110/Text.h"
 using CSC2110::String;
 
 template < class T >
@@ -80,20 +80,33 @@ T* SortedListDoublyLinked<T>::remove(DoubleNode<T>* curr)
    DoubleNode<T>* prev;
    DoubleNode<T>* after;
 
+	after = curr->getNext();
+	prev = curr->getPrev();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+	if(sze == 1)
+	{
+		item = curr->getItem();
+	}
+	else if(prev == NULL)
+	{
+		item = curr->getItem();
+		after->setPrev(NULL);
+		loc = after;
+	}
+	else if(after == NULL)
+	{
+		item = curr->getItem();
+		prev->setNext(NULL);
+		loc = prev;
+	}
+	else
+	{
+		item = curr->getItem();
+		prev->setNext(after);
+		after->setPrev(prev);
+		loc = prev;
+	}
+	
    sze--;
    delete curr;
    return item;

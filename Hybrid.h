@@ -1,7 +1,7 @@
 #if !defined (HYBRID_H)
 #define HYBRID_H
 
-#include "QueueLinked.h"
+#include "CSC2110/QueueLinked.h"
 using CSC2110::QueueLinked;
 #include "SortedListDoublyLinked.h"
 
@@ -44,9 +44,34 @@ Hybrid<T>::~Hybrid()
 //simply comment the first implementation out when working on the second implementation
 //use the getKey method to dequeue/remove
 
+template < class T >
+bool Hybrid<T>::isEmpty()
+{
+	return q->isEmpty();
+}
+
+template < class T >
+void Hybrid<T>::enqueue(T* item)
+{
+	
+	sldl->add(item);
+	q->enqueue(item);
+}
 
 
+template < class T >
+T* Hybrid<T>::dequeue()
+{
+	//DoubleNode<T>* doubleNode = q->dequeue();
+	T* item = q->dequeue();
+	item = sldl->remove(item);
+	return item;
+}
 
-
+template < class T >
+ListDoublyLinkedIterator<T>* Hybrid<T>::iterator()
+{
+	return sldl->iterator();
+}
 
 #endif

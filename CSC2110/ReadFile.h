@@ -19,8 +19,11 @@ class ReadFile
       ReadFile(const char* file_name);
       ~ReadFile();
       CSC2110::String* readLine();
+	  
       bool eof();
       void close();
+	  
+	  static char* entireFile(const char* file_name);
 };
 }
 

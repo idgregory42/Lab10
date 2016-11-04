@@ -1,20 +1,19 @@
 #if !defined RANDOM_H
 #define RANDOM_H
 
+#include "randomc.h"
+
 namespace CSC2110
 {
 class Random
 {
    private:
-      Random();
-void randomInit();
+      CRandomMother rand_mother;
 
    public:
-      virtual ~Random();
-      static Random* getRandom();
-
-int getRandomInt(int lower, int upper);
-float getRandomFloat(float lower, float upper);
+      Random();
+      int getRandomInt(int lower, int upper);
+      float getRandomFloat(float lower, float upper); 
 };
 }
 

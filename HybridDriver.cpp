@@ -1,11 +1,11 @@
 #include "Hybrid.h"
-#include "CD.h"
+#include "CSC2110/CD.h"
 using CSC2110::CD;
-#include "Text.h"
+#include "CSC2110/Text.h"
 using CSC2110::String;
-#include "ListArray.h"
+#include "CSC2110/ListArray.h"
 using CSC2110::ListArray;
-#include "ListArrayIterator.h"
+#include "CSC2110/ListArrayIterator.h"
 using CSC2110::ListArrayIterator;
 
 #include <iostream>

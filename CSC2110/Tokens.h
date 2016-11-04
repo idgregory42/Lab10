@@ -19,9 +19,11 @@ class Tokens
    public:
       Tokens(String* str, char delimiter);
       ~Tokens();  //Tokens is not responsible for deleting each token
-      void displayTokens();
-      String* getToken(int index);  //returns a specifically requested token
+
+      String* getToken(int index);  //returns a specifically requested token 0-based
       int getNumTokens();
+	  
+	  void displayTokens();
 };
 }
 

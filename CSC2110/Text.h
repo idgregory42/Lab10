@@ -1,5 +1,5 @@
-#if !defined TEXT_H
-#define TEXT_H
+#if !defined STRING_H
+#define STRING_H
 
 namespace CSC2110
 {
@@ -14,7 +14,7 @@ class String
       virtual ~String();
       void displayString();
       int length();
-      const char* getText();
+      char* getText();
 
       //add this member function
       char charAt(int index);
